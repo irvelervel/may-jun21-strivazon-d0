@@ -28,7 +28,7 @@ const App = () => {
         </Row>
         <hr />
         <Route path="/" exact render={() => <BookStore cart={cart} setCart={setCart} />} />
-        <Route path="/cart" exact render={(routerProps) => <Cart {...routerProps} cart={cart} />} />
+        <Route path="/cart" exact render={(routerProps) => <Cart {...routerProps} cart={cart} setCart={setCart} />} />
         {/* if you declare a Route and use the render prop, the routerProps do not get passed automatically anymore */}
       </Container>
     </Router>
